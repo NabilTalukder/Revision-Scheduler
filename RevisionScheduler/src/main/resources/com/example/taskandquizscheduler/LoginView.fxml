@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskandquizscheduler.LoginController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="320.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="320.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="754.0" prefWidth="640.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.33331298828125" minWidth="10.0" prefWidth="47.666656494140625" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="532.3333435058594" minWidth="10.0" prefWidth="532.3333435058594" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.3333740234375" minWidth="10.0" prefWidth="32.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="35.33333206176758" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="526.6666679382324" minHeight="10.0" prefHeight="526.6666679382324" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="161.0" prefWidth="533.0" />
+                              <HBox prefHeight="57.0" prefWidth="533.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                    <VBox prefHeight="200.0" prefWidth="332.5">
+                                       <children>
+                                          <MFXTextField fx:id="emailField" floatMode="BORDER" floatingText="Email" prefHeight="38.0" prefWidth="333.0" />
+                                          <Label fx:id="emailValidationLabel" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="337.0" text="emailValidation" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="68.0" prefWidth="533.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                    <VBox prefHeight="200.0" prefWidth="332.5">
+                                       <children>
+                                          <MFXPasswordField fx:id="passwordField" floatMode="BORDER" floatingText="Password" prefHeight="38.0" prefWidth="333.0" />
+                                          <VBox prefHeight="30.0" prefWidth="114.0">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <HBox prefHeight="30.0" prefWidth="105.0" />
+                                                      <HBox prefHeight="30.0" prefWidth="225.0">
+                                                         <children>
+                                                            <Label fx:id="passwordValidationLabel" alignment="TOP_RIGHT" prefHeight="31.0" prefWidth="224.0" text="passwordValidation" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="47.0" prefWidth="533.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                    <VBox prefHeight="200.0" prefWidth="332.5">
+                                       <children>
+                                          <MFXButton fx:id="confirmButton" onAction="#confirmDetails" prefHeight="38.0" prefWidth="333.0" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></MFXButton>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="68.0" prefWidth="533.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                    <VBox prefHeight="200.0" prefWidth="332.5">
+                                       <children>
+                                          <VBox prefHeight="30.0" prefWidth="114.0">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <HBox prefHeight="33.0" prefWidth="263.0">
+                                                         <children>
+                                                            <Label fx:id="passwordValidation1" alignment="TOP_RIGHT" prefHeight="31.0" prefWidth="197.0" text="Don't have an account? " />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Hyperlink fx:id="signInOrRegisterLink" alignment="TOP_LEFT" contentDisplay="TOP" onAction="#goToRegister" prefHeight="33.0" prefWidth="155.0" text="Register">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <padding>
+                                                                  <Insets bottom="14.0" />
+                                                               </padding>
+                                                            </Hyperlink>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.25" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

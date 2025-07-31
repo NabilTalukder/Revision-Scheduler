@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import io.github.palexdev.materialfx.controls.MFXRectangleToggleNode?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskandquizscheduler.QuizController">
+   <left>
+      <VBox prefHeight="720.0" prefWidth="142.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="71.0" prefWidth="142.0" />
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="88.0">
+               <children>
+                  <MFXButton fx:id="exitQuizButton" onAction="#exitQuiz" prefHeight="31.0" prefWidth="142.0" text="Exit Quiz">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></MFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="88.0">
+               <children>
+                  <MFXButton fx:id="logoutButton" onAction="#logout" prefHeight="31.0" prefWidth="142.0" text="Logout">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></MFXButton>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="88.0" />
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="88.0" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="720.0" prefWidth="1140.0">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="quizTitle" prefHeight="100.0" prefWidth="1138.0" text="Quiz Title" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="scoreCounter" prefHeight="105.0" prefWidth="102.0" text="Score">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane prefHeight="618.0" prefWidth="1138.0">
+                           <top>
+                              <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="questionDesc" alignment="CENTER" prefHeight="100.0" prefWidth="1230.0" text="Question Desc" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Label>
+                                 </children>
+                              </HBox>
+                           </top>
+                           <left>
+                              <VBox prefHeight="478.0" prefWidth="562.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="220.0" prefWidth="562.0">
+                                       <children>
+                                          <MFXRectangleToggleNode fx:id="option1Button" onAction="#clickOption" prefHeight="115.0" prefWidth="369.0" text="Option 1" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="256.0" prefWidth="562.0">
+                                       <children>
+                                          <MFXRectangleToggleNode fx:id="option3Button" onAction="#clickOption" prefHeight="115.0" prefWidth="369.0" text="Option 3" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </left>
+                           <right>
+                              <VBox prefHeight="478.0" prefWidth="574.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="220.0" prefWidth="562.0">
+                                       <children>
+                                          <MFXRectangleToggleNode fx:id="option2Button" onAction="#clickOption" prefHeight="115.0" prefWidth="369.0" text="Option 2" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="256.0" prefWidth="562.0">
+                                       <children>
+                                          <MFXRectangleToggleNode fx:id="option4Button" onAction="#clickOption" prefHeight="115.0" prefWidth="369.0" text="Option 4" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </VBox>
+               </center>
+               <bottom>
+                  <MFXProgressBar fx:id="quizProgress" prefHeight="40.0" prefWidth="1136.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
