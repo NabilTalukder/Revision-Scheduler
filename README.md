@@ -9,7 +9,7 @@ The Revision Scheduler can AI-generate multiple-choice quizzes from user input a
 - Add a saved quiz to the calendar or enter some text to remind yourself to complete a task
 
 
-# Installation Guid
+# Installation Guide
 
 
 ## Java Program Setup
