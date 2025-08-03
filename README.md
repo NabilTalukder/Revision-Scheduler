@@ -59,3 +59,4 @@ The Revision Scheduler can AI-generate multiple-choice quizzes from user input a
 - Improvements to UI appearance
 - Gamification of UX
 - Functional website blocker
+- Create an executable file for use as a complete software prototype
